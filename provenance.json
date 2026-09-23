@@ -1,16 +1,10 @@
 {
-  "source_file": "/home/alexios/Project_Cooling/Tilded_Dynamics_GCF/Plots_GCF/data_For_tilted_Ising.jld",
-  "sha256": "39290b6ea335ec4b00f628f8d957c29160b1d649f6931ded647051744260ad02",
-  "eigenvalue_dataset": "lambda_chi_L_u",
-  "Julia_axes": [
+  "eigenvalue_file": "eigenvalues.csv",
+  "eigenvalue_columns": [
     "chi",
     "N",
-    "u"
-  ],
-  "HDF5_axes": [
     "u",
-    "N",
-    "chi"
+    "lambda_real"
   ],
   "chi": [
     100,
@@ -32,14 +26,10 @@
     2.0,
     3.0
   ],
-  "theory_datasets": [
-    "xaxis_theory",
-    "GCD_theory"
+  "theory_file": "ISEP_theory.csv",
+  "theory_columns": [
+    "u",
+    "F_ISEP"
   ],
-  "note": "Real eigenvalues supplied by the user. ISEP is the user-supplied theoretical curve; neither its formula nor simulation settings are reconstructed from this file. Distributed eigenvalues.csv retains only chi=100 and chi=120.",
-  "source_chi": [
-    100,
-    120,
-    200
-  ]
+  "note": "Real eigenvalues and the ISEP theoretical curve were supplied with the project."
 }
