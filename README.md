@@ -259,7 +259,7 @@ Every jump contributes
 
 $$
 \mathcal{D}[L] (\rho)=L\rho L^\dagger-
-\frac12 \{ L^\dagger L,\rho \}.
+\frac12 { L^\dagger L,\rho }.
 $$
 
 ### Vectorized density matrix
@@ -344,7 +344,7 @@ growth. The physical trace is reconstructed as
 
 $$
 \mathrm{Log\_trace}(t)=
-\log|\langle\!\langle I|\rho_{\rm normalized}(t)\rangle\!\rangle|
+\log|\langle\ \langle I|\rho_{\rm normalized}(t)\rangle\ \rangle|
 +\mathrm{log\_scale}(t).
 $$
 
