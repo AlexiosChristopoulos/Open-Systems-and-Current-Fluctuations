@@ -258,9 +258,7 @@ $$
 Every jump contributes
 
 $$
-\mathcal{D}[L](\rho)
-= L\rho L^\dagger
-- \frac{1}{2}\{L^\dagger L,\rho\}.
+\mathcal{D}[L](\rho)= L\rho L^\dagger- \frac{1}{2}\{L^\dagger L,\rho\}.
 $$
 
 ### Vectorized density matrix
