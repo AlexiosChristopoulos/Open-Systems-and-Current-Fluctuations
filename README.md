@@ -210,10 +210,10 @@ together give the bond field $u/(L-1)$.
 At zero counting field,
 
 $$
-H=\epsilon\sum_{j=1}^{L-1}\left(
+H=\epsilon\sum_{j=1}^{L-1}(
 \sigma_j^x\sigma_{j+1}^x+
 \sigma_j^y\sigma_{j+1}^y+
-\Delta\sigma_j^z\sigma_{j+1}^z\right),
+\Delta\sigma_j^z\sigma_{j+1}^z),
 \qquad \Delta=\texttt{Da}.
 $$
 
@@ -258,7 +258,7 @@ $$
 Every jump contributes
 
 $$
-\mathcal D[J](\rho)=J\rho J^\dagger-
+\mathcal{D}[J] (\rho)=J\rho J^\dagger-
 \frac12\{J^\dagger J,\rho\}.
 $$
 
