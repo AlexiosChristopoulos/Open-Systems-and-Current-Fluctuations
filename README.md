@@ -209,70 +209,70 @@ together give the bond field $u/(L-1)$.*
 
 At zero counting field,
 
-\[
+$$
 H=\epsilon\sum_{j=1}^{L-1}\left(
 \sigma_j^x\sigma_{j+1}^x+
 \sigma_j^y\sigma_{j+1}^y+
 \Delta\sigma_j^z\sigma_{j+1}^z\right),
 \qquad \Delta=\texttt{Da}.
-\]
+$$
 
-Using \(\sigma^\pm=(\sigma^x\pm i\sigma^y)/2\),
+Using $\sigma^\pm=(\sigma^x\pm i\sigma^y)/2$,
 
-\[
+$$
 \sigma^x\sigma^x+\sigma^y\sigma^y
 =2(\sigma^+\sigma^-+\sigma^-\sigma^+).
-\]
+$$
 
 This Pauli identity explains the factors of two in `H_oper`. The tilted terms are
 
-\[
+$$
 H_u=\epsilon\sum_j\left[
 2e^{-u/[2(L-1)]}\sigma_j^+\sigma_{j+1}^-+
 2e^{u/[2(L-1)]}\sigma_j^-\sigma_{j+1}^++
 \Delta\sigma_j^z\sigma_{j+1}^z\right].
-\]
+$$
 
 The coherent vectorized generator represents
-\(-i(H_u\rho-\rho H_{-u})\). At `count_u=0` it is the usual commutator. At
+$-i(H_u\rho-\rho H_{-u})$. At `count_u=0` it is the usual commutator. At
 nonzero field, the tilted generator generally does not preserve trace.
 
 ### Lindblad operators
 
 The bulk and boundary jumps are
 
-\[
+$$
 J_j=\sqrt{\eta}\,\sigma_j^z,
-\]
+$$
 
-\[
+$$
 J_{1,+}=\sqrt{\gamma(1-\mu)}\,\sigma_1^+,
 \quad J_{1,-}=\sqrt{\gamma(1+\mu)}\,\sigma_1^-,
-\]
+$$
 
-\[
+$$
 J_{L,+}=\sqrt{\gamma(1+\mu)}\,\sigma_L^+,
 \quad J_{L,-}=\sqrt{\gamma(1-\mu)}\,\sigma_L^-.
-\]
+$$
 
 Every jump contributes
 
-\[
+$$
 \mathcal D[J](\rho)=J\rho J^\dagger-
 \frac12\{J^\dagger J,\rho\}.
-\]
+$$
 
 ### Vectorized density matrix
 
 The local ordering and row-vectorization convention are
 
-\[
+$$
 |\rho\rangle\!\rangle=
 (\rho_{\uparrow\uparrow},\rho_{\uparrow\downarrow},
 \rho_{\downarrow\uparrow},\rho_{\downarrow\downarrow})^T,
 \qquad
 |A\rho B\rangle\!\rangle=(A\otimes B^T)|\rho\rangle\!\rangle.
-\]
+$$
 
 | Names | Local matrix | Action |
 |---|---|---|
@@ -293,25 +293,25 @@ model breaks this symmetry.
 
 The Pauli magnetization current follows from the continuity equation:
 
-\[
+$$
 i[H_{i,i+1},\sigma_i^z]=-j_i,
 \qquad
 j_i=2\epsilon(\sigma_i^x\sigma_{i+1}^y-
 \sigma_i^y\sigma_{i+1}^x)
 =4i\epsilon(\sigma_i^+\sigma_{i+1}^--
 \sigma_i^-\sigma_{i+1}^+).
-\]
+$$
 
-Hence \(d\langle\sigma_i^z\rangle/dt=
-\langle j_{i-1}-j_i\rangle\) in the bulk. The current for
-\(S^z=\sigma^z/2\) is half the saved Pauli magnetization current.
+Hence $d\langle\sigma_i^z\rangle/dt=
+\langle j_{i-1}-j_i\rangle$ in the bulk. The current for
+$S^z=\sigma^z/2$ is half the saved Pauli magnetization current.
 
 The connected correlation is
 
-\[
+$$
 C_{ij}^{zz}=\langle\sigma_i^z\sigma_j^z\rangle-
 \langle\sigma_i^z\rangle\langle\sigma_j^z\rangle.
-\]
+$$
 
 `measure_mpdo_long` divides every measurement by `Tr(rho)`, including for a
 tilted state. Current measured at nonzero `count_u` is an expectation in that
@@ -328,7 +328,7 @@ two-site generators. Odd and even bonds form disjoint layers.
 | `TEBD2` | `A(delta/2), B(delta), A(delta/2)` | 2 |
 | `TEBD4` | Five TEBD2 steps with weights `p,p,1-4p,p,p` | 4 |
 
-Here \(p=1/(4-4^{1/3})\). The central TEBD4 weight is negative and may amplify
+Here $p=1/(4-4^{1/3})$. The central TEBD4 weight is negative and may amplify
 numerical error. TEBD2 is the default.
 
 After each complete step, `evolution_step` performs
@@ -342,13 +342,13 @@ log_scale += log(rescale_factor)
 This prevents exponential overflow or underflow while retaining the removed
 growth. The physical trace is reconstructed as
 
-\[
-\texttt{Log_trace}(t)=
+$$
+\mathrm{Log\_trace}(t)=
 \log|\langle\!\langle I|\rho_{\rm normalized}(t)\rangle\!\rangle|
-+\texttt{log_scale}(t).
-\]
++\mathrm{log\_scale}(t).
+$$
 
-At late time, its slope estimates \(\operatorname{Re}\lambda_L(u)\) if the
+At late time, its slope estimates $\operatorname{Re}\lambda_L(u)$ if the
 initial state overlaps the dominant mode and transients have decayed.
 
 The first `Steps_low_chi` applications use `chi_low`; subsequent applications use
@@ -360,9 +360,9 @@ change the MPS.
 
 At the final checkpoint, the number of measurement rows is
 
-\[
-M=\left\lceil\frac{\texttt{Steps}}{\texttt{save_step}}\right\rceil+1,
-\]
+$$
+M=\left\lceil\frac{\mathrm{Steps}}{\mathrm{save\_step}}\right\rceil+1,
+$$
 
 including step zero and the final step.
 
