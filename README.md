@@ -242,24 +242,24 @@ nonzero field, the tilted generator generally does not preserve trace.
 The bulk and boundary jumps are
 
 $$
-J_j=\sqrt{\eta}\,\sigma_j^z,
+L_j=\sqrt{\eta}\,\sigma_j^z,
 $$
 
 $$
-J_{1,+}=\sqrt{\gamma(1-\mu)}\,\sigma_1^+,
-\quad J_{1,-}=\sqrt{\gamma(1+\mu)}\,\sigma_1^-,
+L_{1,+}=\sqrt{\gamma(1-\mu)}\,\sigma_1^+,
+\quad L_{1,-}=\sqrt{\gamma(1+\mu)}\,\sigma_1^-,
 $$
 
 $$
-J_{L,+}=\sqrt{\gamma(1+\mu)}\,\sigma_L^+,
-\quad J_{L,-}=\sqrt{\gamma(1-\mu)}\,\sigma_L^-.
+L_{L,+}=\sqrt{\gamma(1+\mu)}\,\sigma_L^+,
+\quad L_{L,-}=\sqrt{\gamma(1-\mu)}\,\sigma_L^-.
 $$
 
 Every jump contributes
 
 $$
-\mathcal{D}[J] (\rho)=J\rho J^\dagger-
-\frac12\{J^\dagger J,\rho\}.
+\mathcal{D}[L] (\rho)=L\rho L^\dagger-
+\frac12\{L^\dagger L,\rho\}.
 $$
 
 ### Vectorized density matrix
@@ -348,7 +348,7 @@ $$
 +\mathrm{log\_scale}(t).
 $$
 
-At late time, its slope estimates $\operatorname{Re}\lambda_L(u)$ if the
+At late time, its slope estimates Re$\lambda_L(u)$ if the
 initial state overlaps the dominant mode and transients have decayed.
 
 The first `Steps_low_chi` applications use `chi_low`; subsequent applications use
