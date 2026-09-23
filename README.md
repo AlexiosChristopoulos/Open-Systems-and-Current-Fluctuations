@@ -194,7 +194,7 @@ cutoff does not prove that the bond dimension is sufficient.
 
 ![Open spin chain with site-dependent Lindblad dissipation](spin_chain_lindblad_dissipation.png)
 
-*Each site $j$ may have its own local Lindblad jump operator, represented by
+Each site $j$ may have its own local Lindblad jump operator, represented by
 $L_j$ in the figure. In the present example, `Lind_Dissipator` applies
 `sqrt(eta)*sigma_z` on every site and adds the reservoir jumps at the two
 boundaries. To study nonuniform dissipation, use the site index `j` inside that
@@ -203,7 +203,7 @@ current $J$. The gray annotations are two alternative counting conventions:
 place the full field $u$ on the first bond, or distribute $u/(L-1)$ uniformly
 over all bonds. The current `H_oper` uses the uniform convention. Its ket and
 bra hopping factors contain $u/[2(L-1)]$ because the two vectorized branches
-together give the bond field $u/(L-1)$.*
+together give the bond field $u/(L-1)$.
 
 ### XXZ Hamiltonian and tilt
 
@@ -227,10 +227,10 @@ $$
 This Pauli identity explains the factors of two in `H_oper`. The tilted terms are
 
 $$
-H_u=\epsilon\sum_j\left[
+H_u=\epsilon\sum_j(
 2e^{-u/[2(L-1)]}\sigma_j^+\sigma_{j+1}^-+
 2e^{u/[2(L-1)]}\sigma_j^-\sigma_{j+1}^++
-\Delta\sigma_j^z\sigma_{j+1}^z\right].
+\Delta\sigma_j^z\sigma_{j+1}^z).
 $$
 
 The coherent vectorized generator represents
