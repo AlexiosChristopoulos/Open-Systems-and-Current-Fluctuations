@@ -259,7 +259,7 @@ Every jump contributes
 
 $$
 \mathcal{D}[L] (\rho)=L\rho L^\dagger-
-\frac12\{ L^\dagger L,\rho \}.
+\frac12 \{ L^\dagger L,\rho \}.
 $$
 
 ### Vectorized density matrix
@@ -267,11 +267,11 @@ $$
 The local ordering and row-vectorization convention are
 
 $$
-|\rho\rangle\!\rangle=
+|\rho\rangle\ \rangle=
 (\rho_{\uparrow\uparrow},\rho_{\uparrow\downarrow},
 \rho_{\downarrow\uparrow},\rho_{\downarrow\downarrow})^T,
 \qquad
-|A\rho B\rangle\!\rangle=(A\otimes B^T)|\rho\rangle\!\rangle.
+|A\rho B\rangle\ \rangle=(A\otimes B^T)|\rho\rangle\ \rangle.
 $$
 
 | Names | Local matrix | Action |
