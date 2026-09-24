@@ -11,20 +11,21 @@
 # for j in eachindex(sites)
 #     rho[j] /= 2                  # local I/2, so global rho = I/2^L and Tr(rho)=1
 # end
-# h5open("initial_N6.h5", "w") do f
+# mkpath("Data")
+# h5open(joinpath("Data", "initial_N6.h5"), "w") do f
 #     write(f, "t", 0.0)          # physical starting time
 #     write(f, "rho", rho)       # ITensor writes the MPS as an HDF5 group
 #     write(f, "log_scale", 0.0) # no normalization has yet been removed
 # end
-# Then exit the REPL and run: julia --project=. run_example.jl initial_N6.h5
+# Then exit the REPL and run: julia --project=. run_example.jl Data/initial_N6.h5
 # The creation block is commented so a simulation never overwrites your input.
 
 include(joinpath(@__DIR__, "simulation_GCF.jl"))
 length(ARGS) in (1,2) || error("Supply initial.h5 and optionally an output directory")
 initial_file = ARGS[1]
-# Omit the output argument to save data.h5 and rho.h5 directly in this folder.
+# Omit the output argument to save data.h5 and rho.h5 in the Data subfolder.
 # Supply a different directory when you want to keep previous outputs.
-directory = length(ARGS) == 2 ? ARGS[2] : @__DIR__
+directory = length(ARGS) == 2 ? ARGS[2] : joinpath(@__DIR__, "Data")
 chi_low = 16          # bond-dimension limit for the first Steps_low_chi steps
 chi = 32          # bond-dimension limit afterwards
 cf = 1e-10           # truncation cutoff
