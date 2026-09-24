@@ -513,8 +513,8 @@ Each method's cell explains its inputs and returns `(degree,a0,F)`. With
 2. Linear fit constrained exactly through the origin.
 3. Free linear fit after adding an equally weighted `(0,0)` point.
 4. Polynomial selected by smallest `abs(a0)`, testing degrees 1 through M-1.
-5. Polynomial selected by smallest `abs(a0)` after adding `(0,0)`, testing
-   degrees 1 through M, where M is the number of measured sizes.
+5. Degree-M polynomial after adding `(0,0)`, where M is the number of measured
+   sizes. This method performs one fit and does not select among lower degrees.
 
 The polynomial figures report selected degrees, and their tables give the degree
 at every `(chi,u)`. The ISEP curve is a supplied comparison, never an input to a
